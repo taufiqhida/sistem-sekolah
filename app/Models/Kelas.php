@@ -32,4 +32,10 @@ class Kelas extends Model
     {
         return $this->hasMany(Absensi::class);
     }
+
+    public function getJumlahSiswaAttribute(): int
+    {
+        // withCount('siswaKelas') sets siswa_kelas_count; fallback to relation count
+        return $this->siswa_kelas_count ?? $this->siswaKelas()->count();
+    }
 }

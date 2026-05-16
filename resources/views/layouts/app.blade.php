@@ -102,6 +102,53 @@
             to   { opacity: 1; transform: translateY(0); }
         }
         .animate-fadeup { animation: fadeInUp 0.4s ease-out forwards; }
+
+        /* ============ MOBILE RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            /* Heading halaman lebih kecil di HP */
+            .h3 { font-size: 1.1rem !important; }
+
+            /* Page heading bisa wrap */
+            .d-sm-flex.justify-content-between { flex-wrap: wrap; gap: 8px; }
+            .d-sm-flex.justify-content-between > div,
+            .d-sm-flex.justify-content-between > a,
+            .d-sm-flex.justify-content-between > .d-none { width: 100%; }
+
+            /* Tombol di heading full-width di mobile */
+            .d-sm-flex.justify-content-between .btn { width: 100%; text-align: center; }
+
+            /* Card stat lebih compact */
+            .card-body .h2 { font-size: 1.5rem; }
+
+            /* Tabel selalu scrollable */
+            .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+            /* Canvas chart lebih kecil */
+            canvas { max-height: 220px !important; }
+
+            /* Aksi cepat / quick links */
+            .col-md-3.mb-2, .col-md-4.mb-2 { margin-bottom: 8px !important; }
+
+            /* Topbar nama user disembunyikan di HP sangat kecil */
+            .d-lg-inline { display: none !important; }
+
+            /* Padding container lebih ramping */
+            .container-fluid { padding-left: 12px; padding-right: 12px; }
+
+            /* Form row padding */
+            .card-body { padding: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            /* Tombol edit/hapus di tabel jangan terlalu kecil */
+            .btn-sm { padding: 5px 10px; font-size: 0.78rem; }
+
+            /* Badge tidak terpotong */
+            .badge { white-space: normal; word-break: break-word; }
+
+            /* Heading stat card */
+            .text-xs { font-size: 0.7rem; }
+        }
     </style>
 
     @stack('styles')
